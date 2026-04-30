@@ -1,0 +1,71 @@
+.cta-section {
+  padding: 180px 10%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://i.pinimg.com/1200x/7d/be/1d/7dbe1d60c4fbbaf9ad3143b2aa2510ab.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Beautiful parallax effect */
+  text-align: center;
+  position: relative;
+}
+
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-script {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.cta-title {
+  font-family: var(--font-decorative);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  text-transform: none;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #ffffff; /* Switched to white for dark background */
+}
+
+.cta-explore-link {
+  font-family: var(--font-minimal);
+  color: #ffffff; /* Switched to white */
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cta-explore-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-accent); /* Keep the gold underline */
+  transform: scaleX(0.3);
+  transform-origin: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-explore-link:hover::after {
+  transform: scaleX(1);
+}

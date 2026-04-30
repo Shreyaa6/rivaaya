@@ -1,0 +1,120 @@
+.heritage {
+  padding: 180px 10%;
+  background-color: var(--color-surface);
+}
+
+.heritage-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heritage-content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+@media (max-width: 1024px) {
+  .heritage-content {
+    flex-direction: column-reverse;
+    gap: 80px;
+    text-align: center;
+  }
+}
+
+.heritage-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.section-script-subtitle {
+  font-family: var(--font-serif); /* Changed to Cormorant Garamond */
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-style: italic; /* Classic luxury editorial italic */
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-family: var(--font-decorative); /* Switched to Bodoni Moda for high-contrast royal look */
+  font-size: clamp(3rem, 6vw, 4.5rem); /* Made it larger */
+  line-height: 1.1;
+  margin-bottom: 30px;
+  text-transform: none; /* Keep Title Case as per image */
+  letter-spacing: 0.02em; /* Tighter letter spacing for Didone fonts */
+  color: var(--color-text-main);
+  font-weight: 400;
+}
+
+.heritage-text p {
+  margin-bottom: 40px;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--color-text-main);
+  opacity: 0.85;
+}
+
+.heritage-image {
+  flex: 1; /* Reduced from 1.2 so it's not overwhelmingly big */
+  max-width: 500px; /* Constrain the width so it looks balanced */
+  position: relative;
+  margin: 0 auto; /* Center it nicely */
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* Removed border, padding, and background for a clean look */
+}
+
+.image-wrapper img,
+.image-wrapper .heritage-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  object-fit: cover; /* Important for video */
+}
+
+.heritage-image:hover .image-wrapper img,
+.heritage-image:hover .image-wrapper .heritage-video {
+  transform: scale(1.03);
+}
+
+.link-underline {
+  font-family: var(--font-minimal);
+  color: var(--color-text-main);
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}

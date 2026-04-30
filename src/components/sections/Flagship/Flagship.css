@@ -1,0 +1,64 @@
+.flagship {
+  height: 110vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.flagship-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flagship-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flagship-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darkened the overlay to make text pop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.flagship-content {
+  max-width: 1000px;
+  color: #fff;
+}
+
+.flagship-script-title {
+  font-family: var(--font-serif); /* Changed to elegant serif */
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.flagship-main-title {
+  font-family: var(--font-decorative); /* High-contrast Bodoni */
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  text-transform: none; /* Keep Title Case */
+  letter-spacing: 0.02em;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .flagship-script-title {
+    font-size: 1.5rem;
+  }
+}

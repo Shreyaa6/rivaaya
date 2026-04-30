@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italiana&family=Pinyon+Script&display=swap');
+
+:root {
+  /* Royal Sabyasachi-Inspired Palette */
+  --color-primary: #1A1A1A; 
+  --color-accent: #C5A059;  /* Antique Gold */
+  --color-maroon: #5D0E13;  /* Royal Deep Crimson */
+  --color-background: #F2EFE9; /* Antique Parchment */
+  --color-surface: #F9F7F2;
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #555555;
+  --color-border: #D9D2C5;
+  
+  /* Typography */
+  --font-decorative: 'Bodoni Moda', serif;
+  --font-minimal: 'Tenor Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-heading: 'Italiana', serif;
+  
+  /* Spacing */
+  --section-padding: 220px 10%;
+  --transition-slow: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-serif);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-decorative);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+p {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.minimal-text {
+  font-family: var(--font-minimal);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.65rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-minimal);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  transition: var(--transition-smooth);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}

@@ -1,0 +1,134 @@
+.featured {
+  padding: 180px 8%;
+  background-color: var(--color-background);
+}
+
+.featured-header-centered {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.featured-pre-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-style: italic;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+}
+
+.featured-main-title {
+  font-family: var(--font-minimal);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.featured-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .featured-grid-3x2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-grid-3x2 {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.featured-item-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  text-decoration: none; /* Remove default link underline */
+}
+
+.featured-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.featured-item-image {
+  aspect-ratio: 2/3; /* Changed to perfectly fit Pinterest portrait dimensions */
+  overflow: hidden;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.featured-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease;
+}
+
+.featured-item-card:hover .featured-item-image img {
+  transform: scale(1.04);
+}
+
+.featured-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* Elegant dark tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.explore-text {
+  color: #fff;
+  font-family: var(--font-minimal);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s ease;
+}
+
+.featured-item-card:hover .featured-item-overlay {
+  opacity: 1;
+}
+
+.featured-item-card:hover .explore-text {
+  transform: translateY(0);
+}
+
+.featured-item-info {
+  text-align: center;
+}
+
+.featured-item-name {
+  font-family: var(--font-decorative);
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.featured-item-price {
+  font-family: var(--font-minimal);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}

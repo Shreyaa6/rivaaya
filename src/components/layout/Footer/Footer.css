@@ -1,0 +1,113 @@
+.footer-minimal {
+  padding: 120px 5% 60px;
+  background-color: var(--color-surface); /* Antique Parchment */
+  text-align: center;
+}
+
+.footer-minimal-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo-wrap {
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  height: 160px; /* Made even larger per user request */
+  width: auto;
+  opacity: 0.9;
+}
+
+.footer-nav-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.footer-nav-horizontal a {
+  font-family: var(--font-minimal);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-text-main);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav-horizontal a:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+.footer-social-horizontal {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.footer-social-horizontal a {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-accent);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social-horizontal a:hover {
+  opacity: 1;
+}
+
+.footer-minimal-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(197, 160, 89, 0.2); /* Subtle gold border */
+}
+
+.footer-motto {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-text-main);
+  opacity: 0.7;
+}
+
+.footer-legal-flex {
+  display: flex;
+  gap: 30px;
+  font-family: var(--font-minimal);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-main);
+  opacity: 0.5;
+}
+
+.footer-legal-flex a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-legal-flex a:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .footer-nav-horizontal {
+    gap: 25px;
+  }
+}
