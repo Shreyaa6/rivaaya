@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
 
 const Footer: React.FC = () => {
@@ -11,11 +12,11 @@ const Footer: React.FC = () => {
         </div>
 
         <nav className="footer-nav-horizontal">
-          <a href="#">Bridal</a>
-          <a href="#">Festive</a>
-          <a href="#">Couture</a>
-          <a href="#">Heritage</a>
-          <a href="#">Bespoke</a>
+          <Link to="/collections">Bridal</Link>
+          <Link to="/collections">Festive</Link>
+          <Link to="/collections">Couture</Link>
+          <Link to="/heritage">Heritage</Link>
+          <Link to="/bespoke">Bespoke</Link>
         </nav>
 
         <div className="footer-social-horizontal">

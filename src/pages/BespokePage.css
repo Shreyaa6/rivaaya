@@ -1,0 +1,159 @@
+.bespoke-page {
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+.bespoke-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left Side: Imagery */
+.bespoke-image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.bespoke-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bespoke-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Form */
+.bespoke-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 8%;
+  background-color: var(--color-surface);
+}
+
+.bespoke-form-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.bespoke-subtitle {
+  font-family: var(--font-minimal);
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.bespoke-title {
+  font-family: var(--font-decorative);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--color-text-main);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.bespoke-description {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+
+/* Luxury Form Styles */
+.luxury-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.luxury-input {
+  width: 100%;
+  padding: 15px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-main);
+  transition: border-color 0.3s ease;
+}
+
+.luxury-input:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent);
+}
+
+.luxury-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.luxury-input.textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: var(--color-text-main);
+  color: var(--color-background);
+  border: none;
+  font-family: var(--font-minimal);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 1024px) {
+  .bespoke-container {
+    flex-direction: column;
+  }
+  
+  .bespoke-image-section {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .bespoke-form-section {
+    padding: 80px 5%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

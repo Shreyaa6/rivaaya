@@ -1,27 +1,35 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import Navbar from './components/layout/Navbar/Navbar';
-import Hero from './components/sections/Hero/Hero';
-import Collections from './components/sections/Collections/Collections';
-import Heritage from './components/sections/Heritage/Heritage';
-import Featured from './components/sections/Featured/Featured';
-import Flagship from './components/sections/Flagship/Flagship';
-import Testimonials from './components/sections/Testimonials/Testimonials';
-import CTA from './components/sections/CTA/CTA';
 import Footer from './components/layout/Footer/Footer';
+import CartDrawer from './components/layout/Cart/CartDrawer';
+import HomePage from './pages/HomePage';
+import CollectionsPage from './pages/CollectionsPage';
+import HeritagePage from './pages/HeritagePage';
+import BespokePage from './pages/BespokePage';
+import ProductPage from './pages/ProductPage';
+import CheckoutPage from './pages/CheckoutPage';
 import './styles/theme.css';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <Collections />
-      <Heritage />
-      <Featured />
-      <Flagship />
-      <Testimonials />
-      <CTA />
-      <Footer />
-    </div>
+    <CartProvider>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <CartDrawer />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/collections" element={<CollectionsPage />} />
+            <Route path="/heritage" element={<HeritagePage />} />
+            <Route path="/bespoke" element={<BespokePage />} />
+            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
