@@ -74,6 +74,11 @@ button {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   transition: var(--transition-smooth);
+  outline: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 /* Scrollbar */

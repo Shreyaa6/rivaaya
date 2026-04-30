@@ -93,7 +93,7 @@
   margin-bottom: 60px;
 }
 
-.btn-primary {
+.product-btn-primary {
   flex: 2;
   padding: 20px 0;
   background-color: var(--color-text-main);
@@ -107,12 +107,12 @@
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.product-btn-primary:hover {
   background-color: var(--color-accent);
   color: #fff;
 }
 
-.btn-secondary {
+.product-btn-secondary {
   flex: 1;
   padding: 20px 0;
   background-color: transparent;
@@ -126,7 +126,7 @@
   transition: all 0.3s ease;
 }
 
-.btn-secondary:hover {
+.product-btn-secondary:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
