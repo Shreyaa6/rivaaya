@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import bridalVideo from '../../../assets/bridal.mp4';
+
 import './Flagship.css';
 
 const Flagship: React.FC = () => {
@@ -8,7 +8,7 @@ const Flagship: React.FC = () => {
     <section className="flagship">
       <div className="flagship-image-container">
         <video 
-          src={bridalVideo} 
+          src="/videos/bridal.mp4" 
           autoPlay 
           loop 
           muted 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import legacyVideo from '../../../assets/legacy.mp4';
+
 import './Heritage.css';
 
 const Heritage: React.FC = () => {
@@ -35,7 +35,7 @@ const Heritage: React.FC = () => {
           >
             <div className="image-wrapper">
               <video 
-                src={legacyVideo} 
+                src="/videos/legacy.mp4" 
                 autoPlay 
                 loop 
                 muted 
