@@ -8,13 +8,14 @@ const Flagship: React.FC = () => {
     <section className="flagship">
       <div className="flagship-image-container">
         <video 
-          src="/videos/bridal.mp4" 
           autoPlay 
           loop 
           muted 
           playsInline
           className="flagship-video-bg"
-        />
+        >
+          <source src="/videos/bridal.mp4" type="video/mp4" />
+        </video>
         <div className="flagship-overlay">
           <div className="flagship-content">
             <motion.span 

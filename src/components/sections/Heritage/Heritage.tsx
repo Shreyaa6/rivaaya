@@ -35,13 +35,14 @@ const Heritage: React.FC = () => {
           >
             <div className="image-wrapper">
               <video 
-                src="/videos/legacy.mp4" 
                 autoPlay 
                 loop 
                 muted 
                 playsInline
                 className="heritage-video"
-              />
+              >
+                <source src="/videos/legacy.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
         </div>
