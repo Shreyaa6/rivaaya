@@ -124,6 +124,10 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .product-btn-secondary:hover {
@@ -191,5 +195,16 @@
   
   .product-info-section {
     padding: 40px 20px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-btn-primary,
+  .product-btn-secondary {
+    width: 100%;
+    flex: none;
   }
 }

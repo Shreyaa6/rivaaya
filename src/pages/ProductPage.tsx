@@ -72,7 +72,7 @@ const ProductPage: React.FC = () => {
 
             <div className="product-actions">
               <button className="product-btn-primary" onClick={handleAddToCart}>Add to Cart</button>
-              <Link to="/checkout" className="product-btn-secondary" onClick={handleAddToCart} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Buy It Now</Link>
+              <Link to="/checkout" className="product-btn-secondary" onClick={handleAddToCart}>Buy It Now</Link>
             </div>
 
             <div className="product-accordion">
